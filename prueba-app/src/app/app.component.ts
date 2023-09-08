@@ -6,11 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']//Estilos encapsulados para trabjar en este componente
 })
 export class AppComponent {
-  public counter: number =10;
-
-  increaseBy(value: number){
-    this.counter+=value;
-  }
+ 
 
 }
 

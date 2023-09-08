@@ -1,0 +1,27 @@
+<h1 class="mt-2">Pokedex</h1>
+
+<ul class="nav nav-tabs">
+    <!-- tab pokemon -->
+    <li class="nav-item" (click)="currentTab= 'tab-pokemon'">
+      <a class="nav-link active" [ngClass]="{'active': currentTab === 'tab-pokemon'}" href="#">Pokemon</a>
+    </li>
+
+    <!-- tab Favoritos -->
+    <li class="nav-item" (click)="currentTab='tab-favorites'">
+      <a class="nav-link" [ngClass]="{'active': currentTab === 'tab-favorites'}" href="#">Favoritos</a>
+    </li>
+  </ul>
+
+
+  <div class="row mt-5">
+    
+    <div class="card col-4"
+    *ngFor="let pokemon of pokemon; let i=index">
+        
+        <div class="card-body">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{ i + 1 }}.png" class="card-img-top"    >  
+            <p class="card-text">Pokemon</p>
+        </div>
+      </div>
+
+  </div>
